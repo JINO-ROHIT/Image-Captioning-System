@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.79),
+      rgba(40, 180, 133, 0.792)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 100%);
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.header__logo {
+  height: 35px;
+  /* width will auto adjust */
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+
+  backface-visibility: hidden;
+
+  margin-bottom: 60px;
+}
+
+.heading-primary--main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+}
+
+.heading-primary--sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 17.4px;
+
+  animation: moveInRight 3s;
+}
+
+.header__text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  80% {
+    transform: translate(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+
+  80% {
+    transform: translate(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #fff;
+  color: #777;
+}
+
+.predict-menu {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.79),
+      rgba(40, 180, 133, 0.792)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  /* clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%); */
+  position: relative;
+}
+
+.predictor__text-box {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  top: 120px;
+  bottom: 20%;
+  background: #bbbb;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  max-width: 450px;
+  height: 60vh;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px black;
+}
+
+.upload-icon {
+  position: absolute;
+  width: 60px;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.pred--btn {
+  position: absolute;
+  width: 60px;
+  bottom: 4%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 70px;
+  padding-left: 20px;
+  display: inline-block;
+  border-radius: 20px;
+}
+
+.pred--btn-2 {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 15px 70px;
+  padding-left: 20px;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  width: 200px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  border-style: solid white;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+#file {
+  display: none;
+}
+
+.pred-image {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  opacity: 0.4;
+  top: 50%;
+}
+
+.org-image {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+}
+
+.org-image-main {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  left: 20%;
+  top: 70%;
+}
+
+.header_2 {
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      hsla(111, 55%, 64%, 0.79),
+      rgba(40, 180, 133, 0.792)
+    ),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.header__text-box_2 {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IC App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index_style.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/6ecc3f8e2e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <header class="header">
+
+      <div class="header__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--main">Eva</span>
+          <span class="heading-primary--sub">Image Captioning System</span>
+        </h1>
+
+        <a href="#imgBox" class="btn btn--white"
+          >Start Now <i class="fa-solid fa-hand-point-down"></i
+        ></a>
+      </div>
+    </header>
+
+    <div class="predict-menu">
+      <div class="predictor__text-box">
+        <h1 class="heading-primary">
+          <span class="heading-primary--sub">Caption your images here</span>
+        </h1>
+      </div>
+
+      <form method ='post' enctype=multipart/form-data>
+        <div class="container" id="imgBox">
+          <input
+            type="file"
+            accept="image/*"
+            name="image"
+            id="file"
+            onchange="loadFile(event)"
+          />
+          <label for="file"
+            ><i class="fa-solid fa-upload fa-3x upload-icon"></i
+          ></label>
+        </div>
+
+        <input type="number" name="cap_count" placeholder="Enter the Count" required="required" class="pred--btn-2" />
+
+
+        <input type="submit" id="submit" value="Predict" class="pred--btn" />
+      </form>
+
+    </div>
+
+    <script>
+      var imgBox = document.getElementById("imgBox");
+
+      var loadFile = function (event) {
+        imgBox.style.backgroundImage =
+          "url(" + URL.createObjectURL(event.target.files[0]) + ")";
+      };
+    </script>
+  </body>
+</html>

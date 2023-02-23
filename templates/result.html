@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Results Page</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/index_style.css') }}"
+    />
+  </head>
+  <body>
+    <header class="header_2">
+      <div class="header__text-box_2">
+        <h1 class="heading-primary">
+          <span class="heading-primary--sub">Here are your results!</span>
+
+          <img src=" {{original}}" class="org-image-main" />
+          {{label}}
+        </h1>
+      </div>
+    </header>
+  </body>
+</html>
